@@ -1,0 +1,24 @@
+import 'dart:io';
+
+class Mahasiswa {
+  String nama;
+  String nim;
+  int usia;
+
+  Mahasiswa(this.nama, this.nim, this.usia);
+
+  void perkenalan() {
+    int tahunSaatIni = DateTime.now().year;
+    print('Perkenalkan, nama saya $nama dengan NIM $nim dan usia saya ${tahunSaatIni - usia} tahun.');
+  }
+}
+
+void main() {
+  // Buat objek Mahasiswa sesuai dengan data diri masing-masing
+  Mahasiswa mahasiswa1 = Mahasiswa('John', '123456', 20);
+  Mahasiswa mahasiswa2 = Mahasiswa('Alice', '654321', 22);
+
+  // Panggil method perkenalan() untuk masing-masing objek
+  mahasiswa1.perkenalan();
+  mahasiswa2.perkenalan();
+}
